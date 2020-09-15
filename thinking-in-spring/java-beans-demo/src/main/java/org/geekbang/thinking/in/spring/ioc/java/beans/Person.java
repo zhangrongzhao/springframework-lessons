@@ -8,8 +8,9 @@ package org.geekbang.thinking.in.spring.ioc.java.beans;
   * @author
   * */
 public class Person {
-
+    //String to String
     private String name; // Properties
+    //String to Integer
     private Integer age;
 
     public String getName() {
