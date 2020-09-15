@@ -1,7 +1,7 @@
 package org.geekbang.thinking.in.spring.ioc.container.overview;
 
-import org.geekbang.thinking.in.spring.ioc.container.annotation.Super;
-import org.geekbang.thinking.in.spring.ioc.container.domain.User;
+import org.geekbang.thinking.in.spring.ioc.container.overview.annotation.Super;
+import org.geekbang.thinking.in.spring.ioc.container.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -19,7 +19,7 @@ import java.util.Map;
  * @see BeanFactory#getBean(String)
  * @see BeanFactory#getBean(Class) 
  * @see BeanFactory#getBean(String, Class) 
- * @see ListableBeanFactory#getBeansOfType(Class) 
+ * @see ListableBeanFactory#getBeansOfType(Class)
  * @see ListableBeanFactory#getBeansWithAnnotation(Class) 
  * ***/
 public class DependencyLookupDemo {

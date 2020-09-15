@@ -1,6 +1,6 @@
-package org.geekbang.thinking.in.spring.ioc.container.domain;
+package org.geekbang.thinking.in.spring.ioc.container.overview.domain;
 
-import org.geekbang.thinking.in.spring.ioc.container.annotation.Super;
+import org.geekbang.thinking.in.spring.ioc.container.overview.annotation.Super;
 
 /**
  *  超级用户

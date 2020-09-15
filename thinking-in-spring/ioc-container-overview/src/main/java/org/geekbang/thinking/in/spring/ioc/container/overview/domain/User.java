@@ -1,7 +1,4 @@
-package org.geekbang.thinking.in.spring.ioc.container.domain;
-
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+package org.geekbang.thinking.in.spring.ioc.container.overview.domain;
 
 /**
  * 用户类

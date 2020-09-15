@@ -1,4 +1,4 @@
-package org.geekbang.thinking.in.spring.ioc.container.annotation;
+package org.geekbang.thinking.in.spring.ioc.container.overview.annotation;
 
 import java.lang.annotation.*;
 
