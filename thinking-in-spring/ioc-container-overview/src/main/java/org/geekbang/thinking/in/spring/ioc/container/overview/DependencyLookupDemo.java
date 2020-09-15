@@ -11,10 +11,16 @@ import java.util.Map;
 
 /**
  * 依赖查找示例
- * byName查找
+ * byName
  * byType查找
+ * byName+Type
+ * byAnnotation
  * @author
- * @see
+ * @see BeanFactory#getBean(String)
+ * @see BeanFactory#getBean(Class) 
+ * @see BeanFactory#getBean(String, Class) 
+ * @see ListableBeanFactory#getBeansOfType(Class) 
+ * @see ListableBeanFactory#getBeansWithAnnotation(Class) 
  * ***/
 public class DependencyLookupDemo {
     public static void main(String[] args){
