@@ -4,14 +4,14 @@ package org.geekbang.thinking.in.spring.ioc.container.overview.domain;
  * 用户类
  * **/
 public class User  {//implements InitializingBean, DisposableBean
-    private Long Id;
+    private Long id;
     private String name;
 
     public Long getId() {
-        return Id;
+        return id;
     }
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -24,8 +24,8 @@ public class User  {//implements InitializingBean, DisposableBean
     @Override
     public String toString() {
         return "User{" +
-                "Id=" + Id +
-                ", name='" + name + '\'' +
+                "id=" + this.id +
+                ", name='" + this.name + '\'' +
                 '}';
     }
 
