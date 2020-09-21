@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import java.util.Collection;
 
 /**
- * User 仓库
+ * 用户信息仓库
  * */
 public class UserRepository {
     private Collection<User> users;//自定义Bean
