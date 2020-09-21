@@ -1,5 +1,6 @@
 package org.geekbang.thinking.in.spring.ioc.container.overview.dependency.lookup;
 
+import org.geekbang.thinking.in.spring.ioc.container.overview.annotation.Super;
 import org.geekbang.thinking.in.spring.ioc.container.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
@@ -27,8 +28,18 @@ public class DependencyLookupDemo {
 
         //collection by type
         lookupCollectionByType(beanFactory);
+
+        //by annotation
+        lookupByAnnotationType(beanFactory);
     }
 
+    private static void lookupByAnnotationType(BeanFactory beanFactory) {
+        if(beanFactory instanceof ListableBeanFactory){
+            ListableBeanFactory listableBeanFactory=(ListableBeanFactory)beanFactory;
+            Map<String,User> userMap = (Map)listableBeanFactory.getBeansWithAnnotation(Super.class);
+            System.out.println("查找注解Super的所有用户："+userMap);
+        }
+    }
     private static void lookupCollectionByType(BeanFactory beanFactory) {
         if(beanFactory instanceof ListableBeanFactory){
             ListableBeanFactory listableBeanFactory=(ListableBeanFactory)beanFactory;
