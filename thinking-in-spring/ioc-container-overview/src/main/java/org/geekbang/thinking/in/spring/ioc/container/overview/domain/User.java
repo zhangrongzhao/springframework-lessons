@@ -38,4 +38,11 @@ public class User  {//implements InitializingBean, DisposableBean
 //    public void afterPropertiesSet() throws Exception {
 //        System.out.println("====User 对象====初始化==== ");
 //    }
+
+    public static  User  createUser(){
+        User user = new User();
+        user.setId(-1L);
+        user.setName("default user");
+        return user;
+    }
 }
