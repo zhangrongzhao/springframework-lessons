@@ -1,11 +1,17 @@
 package org.geekbang.thinking.in.spring.ioc.container.overview.domain;
 
+import org.geekbang.thinking.in.spring.ioc.container.overview.enums.City;
+import org.springframework.core.io.Resource;
+
+
 /**
  * 用户类
  * **/
 public class User  {//implements InitializingBean, DisposableBean
     private Long id;
     private String name;
+    private City city;
+    private Resource  configLocationFile;
 
     public Long getId() {
         return id;
@@ -21,12 +27,18 @@ public class User  {//implements InitializingBean, DisposableBean
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + this.id +
-                ", name='" + this.name + '\'' +
-                '}';
+    public City getCity() {
+        return city;
+    }
+    public void setCity(City city) {
+        this.city = city;
+    }
+
+    public Resource getConfigLocationFile() {
+        return configLocationFile;
+    }
+    public void setConfigLocationFile(Resource configLocationFile) {
+        this.configLocationFile = configLocationFile;
     }
 
 //    @Override
@@ -44,5 +56,15 @@ public class User  {//implements InitializingBean, DisposableBean
         user.setId(-1L);
         user.setName("default user");
         return user;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", city=" + city +
+                ", configLocationFile=" + configLocationFile +
+                '}';
     }
 }
