@@ -3,6 +3,8 @@ package org.geekbang.thinking.in.spring.ioc.container.overview.domain;
 import org.geekbang.thinking.in.spring.ioc.container.overview.enums.City;
 import org.springframework.core.io.Resource;
 
+import java.util.Arrays;
+
 
 /**
  * 用户类
@@ -11,6 +13,7 @@ public class User  {//implements InitializingBean, DisposableBean
     private Long id;
     private String name;
     private City city;
+    private City[] workCities;
     private Resource  configLocationFile;
 
     public Long getId() {
@@ -41,6 +44,13 @@ public class User  {//implements InitializingBean, DisposableBean
         this.configLocationFile = configLocationFile;
     }
 
+    public City[] getWorkCities() {
+        return workCities;
+    }
+    public void setWorkCities(City[] workCities) {
+        this.workCities = workCities;
+    }
+
 //    @Override
 //    public void destroy() throws Exception {
 //        System.out.println("====User 对象====销毁===== ");
@@ -58,12 +68,14 @@ public class User  {//implements InitializingBean, DisposableBean
         return user;
     }
 
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", city=" + city +
+                ", workCities=" + Arrays.toString(workCities) +
                 ", configLocationFile=" + configLocationFile +
                 '}';
     }
